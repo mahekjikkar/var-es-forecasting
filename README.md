@@ -1,6 +1,6 @@
 # var-es-forecasting
 
-**Value-at-Risk and Expected Shortfall Forecasting using Path Signatures and Deep Lattice Networks**
+**Value-at-Risk and Expected Shortfall Forecasting using Path Signatures**
 
 A production-style financial risk forecasting pipeline benchmarking six models — from classical statistical methods to deep learning with path signature features — evaluated on 1,507 out-of-sample S&P 500 trading days (2020–2025) using a rigorous statistical backtesting framework.
 
@@ -23,7 +23,6 @@ This project implements, trains, and evaluates models for one-step-ahead **VaR**
 | Quantile Regression | Semi-parametric | ✅ | ✅ |
 | LSTM-Classical | Deep learning | ✅ | ✅ |
 | LSTM + Path Signatures | Deep learning | ✅ | ✅ |
-| Deep Lattice Network (DLN) | Deep learning | ✅ | ❌ |
 
 ---
 
@@ -81,7 +80,6 @@ var-es-forecasting/
 │   ├── garch.py                   # GARCH(1,1) Normal & Student-t
 │   ├── quantile_regression.py
 │   ├── lstm_model.py              # LSTM-Cls and LSTM+Sig (shared architecture)
-│   └── dln_model.py               # Deep Lattice Network (Narayan et al. 2021)
 │
 ├── loss/
 │   └── joint_loss.py              # FZ score + coverage penalty + ES/VaR ratio
@@ -92,7 +90,6 @@ var-es-forecasting/
 │
 ├── notebooks/
 │   ├── Model_comparisons.ipynb    # Full model comparison + DQ test results
-│   └── DLN.ipynb                  # DLN training and evaluation
 │
 ├── results/
 │   ├── var_results.csv
